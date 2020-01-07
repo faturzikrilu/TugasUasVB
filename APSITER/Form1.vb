@@ -62,4 +62,8 @@ Public Class Form1
         'userlogin = RD.Item("nm_user")
         RD.Close()
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Percobaan
+    End Sub
 End Class
