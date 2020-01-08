@@ -38,7 +38,6 @@ Partial Class Fmenu
         Me.SiswaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuruToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -133,14 +132,14 @@ Partial Class Fmenu
         'SiswaToolStripMenuItem1
         '
         Me.SiswaToolStripMenuItem1.Name = "SiswaToolStripMenuItem1"
-        Me.SiswaToolStripMenuItem1.Size = New System.Drawing.Size(120, 26)
-        Me.SiswaToolStripMenuItem1.Text = "Siswa"
+        Me.SiswaToolStripMenuItem1.Size = New System.Drawing.Size(194, 26)
+        Me.SiswaToolStripMenuItem1.Text = "Siswa Dan Guru"
         '
         'GuruToolStripMenuItem1
         '
         Me.GuruToolStripMenuItem1.Name = "GuruToolStripMenuItem1"
-        Me.GuruToolStripMenuItem1.Size = New System.Drawing.Size(120, 26)
-        Me.GuruToolStripMenuItem1.Text = "Guru"
+        Me.GuruToolStripMenuItem1.Size = New System.Drawing.Size(194, 26)
+        Me.GuruToolStripMenuItem1.Text = "Siswa Terlambat"
         '
         'AboutToolStripMenuItem
         '
@@ -151,16 +150,6 @@ Partial Class Fmenu
         Me.AboutToolStripMenuItem.Text = "About"
         Me.AboutToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(338, 355)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 31)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Label1"
-        '
         'Fmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -168,11 +157,11 @@ Partial Class Fmenu
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 462)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Fmenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Aplikasi Siswa Terlambat"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -195,6 +184,5 @@ Partial Class Fmenu
     Friend WithEvents GuruToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class

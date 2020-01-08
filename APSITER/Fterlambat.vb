@@ -24,12 +24,14 @@ Public Class Fterlambat
         DataGridView1.Columns(1).Width = 100
         DataGridView1.Columns(2).Width = 100
         DataGridView1.Columns(3).Width = 150
-        DataGridView1.Columns(4).Width = 210
+        DataGridView1.Columns(4).Width = 150
+        DataGridView1.Columns(5).Width = 150
         DataGridView1.Columns(0).HeaderText = "NIS"
         DataGridView1.Columns(1).HeaderText = "Tanggal"
         DataGridView1.Columns(2).HeaderText = "Waktu"
         DataGridView1.Columns(3).HeaderText = "Alasan"
         DataGridView1.Columns(4).HeaderText = "Peringatan"
+        DataGridView1.Columns(5).HeaderText = "Sangsi"
         DataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DataGridView1.RowsDefaultCellStyle.BackColor = Color.BlueViolet
         DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.BlanchedAlmond
@@ -41,7 +43,6 @@ Public Class Fterlambat
         DataGridView1.DataSource = ds.Tables("t_terlambat")
         DataGridView1.ReadOnly = True
         aturangrid()
-
     End Sub
 
     Private Sub Fterlambat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -59,6 +60,7 @@ Public Class Fterlambat
         cb_nis.Text = ""
         tb_alasan.Text = ""
         tb_peringatan.Text = ""
+        tb_sangsi.Text = ""
         cb_nis.Focus()
     End Sub
 
@@ -80,14 +82,14 @@ Public Class Fterlambat
         koneksi()
         Try
             Dim str As String
-            str = "insert into t_terlambat values('" & cb_nis.Text & "','" & tb_tgl.Text & "','" & tb_waktu.Text & "','" & tb_alasan.Text & "','" & tb_peringatan.Text & "')"
+            str = "insert into t_terlambat values('" & cb_nis.Text & "','" & tb_tgl.Text & "','" & tb_waktu.Text & "','" & tb_alasan.Text & "','" & tb_peringatan.Text & "','" & tb_sangsi.Text & "')"
             cmd = New MySqlCommand(str, conn)
             cmd.ExecuteNonQuery()
-            MessageBox.Show("insert data terlambat berhasil dilakukan")
+            MessageBox.Show("insert data siswa terlambat berhasil dilakukan")
             tampilangrid()
             kosong()
         Catch ex As Exception
-            MessageBox.Show("insert data terlambat gagal dilakukan")
+            MessageBox.Show("insert data siswa terlambat gagal dilakukan")
         End Try
     End Sub
 
@@ -110,6 +112,7 @@ Public Class Fterlambat
         'tb_waktu.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value
         tb_alasan.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value
         tb_peringatan.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value
+        tb_sangsi.Text = DataGridView1.Rows(e.RowIndex).Cells(5).Value
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -117,5 +120,20 @@ Public Class Fterlambat
         tb_waktu.Text = Format(Now, "HH:mm:ss")
         Label6.Text = Format(Now, "dd/MM/yyyy")
         Label7.Text = Format(Now, "HH:mm:ss")
+    End Sub
+
+    Private Sub btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
+        Call koneksi()
+        cmd = New MySqlCommand("select * from t_terlambat where nis like '%" & txtcari.Text & "%'", conn)
+        rd = cmd.ExecuteReader
+        rd.Read()
+        If rd.HasRows Then
+            Call koneksi()
+            da = New MySqlDataAdapter("select * from t_terlambat where nis like '%" & txtcari.Text & "%'", conn)
+            ds = New DataSet
+            da.Fill(ds, "ketemu")
+            DataGridView1.DataSource = ds.Tables("ketemu")
+            DataGridView1.ReadOnly = True
+        End If
     End Sub
 End Class

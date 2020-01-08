@@ -23,6 +23,7 @@ Partial Class Fterlambat
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fterlambat))
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btn_hapus = New System.Windows.Forms.Button()
         Me.btn_keluar = New System.Windows.Forms.Button()
@@ -43,6 +44,11 @@ Partial Class Fterlambat
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cb_nis = New System.Windows.Forms.ComboBox()
+        Me.txtcari = New System.Windows.Forms.TextBox()
+        Me.btn_cari = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.tb_sangsi = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -146,7 +152,7 @@ Partial Class Fterlambat
         Me.tb_alasan.Location = New System.Drawing.Point(120, 133)
         Me.tb_alasan.Multiline = True
         Me.tb_alasan.Name = "tb_alasan"
-        Me.tb_alasan.Size = New System.Drawing.Size(350, 84)
+        Me.tb_alasan.Size = New System.Drawing.Size(236, 84)
         Me.tb_alasan.TabIndex = 92
         '
         'Label4
@@ -164,7 +170,7 @@ Partial Class Fterlambat
         Me.tb_peringatan.Location = New System.Drawing.Point(120, 223)
         Me.tb_peringatan.Multiline = True
         Me.tb_peringatan.Name = "tb_peringatan"
-        Me.tb_peringatan.Size = New System.Drawing.Size(350, 75)
+        Me.tb_peringatan.Size = New System.Drawing.Size(236, 75)
         Me.tb_peringatan.TabIndex = 94
         '
         'Label5
@@ -184,9 +190,9 @@ Partial Class Fterlambat
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(37, 304)
+        Me.DataGridView1.Location = New System.Drawing.Point(376, 280)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(680, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(394, 169)
         Me.DataGridView1.TabIndex = 95
         '
         'Panel1
@@ -227,11 +233,59 @@ Partial Class Fterlambat
         Me.cb_nis.Size = New System.Drawing.Size(212, 21)
         Me.cb_nis.TabIndex = 80
         '
+        'txtcari
+        '
+        Me.txtcari.Location = New System.Drawing.Point(376, 244)
+        Me.txtcari.Name = "txtcari"
+        Me.txtcari.Size = New System.Drawing.Size(99, 20)
+        Me.txtcari.TabIndex = 97
+        '
+        'btn_cari
+        '
+        Me.btn_cari.Location = New System.Drawing.Point(493, 242)
+        Me.btn_cari.Name = "btn_cari"
+        Me.btn_cari.Size = New System.Drawing.Size(40, 23)
+        Me.btn_cari.TabIndex = 98
+        Me.btn_cari.Text = "Cari"
+        Me.btn_cari.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(373, 223)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(115, 13)
+        Me.Label8.TabIndex = 99
+        Me.Label8.Text = "Ketik Berdasarkan NIS"
+        '
+        'tb_sangsi
+        '
+        Me.tb_sangsi.Location = New System.Drawing.Point(120, 304)
+        Me.tb_sangsi.Multiline = True
+        Me.tb_sangsi.Name = "tb_sangsi"
+        Me.tb_sangsi.Size = New System.Drawing.Size(236, 75)
+        Me.tb_sangsi.TabIndex = 100
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(34, 320)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(50, 18)
+        Me.Label10.TabIndex = 101
+        Me.Label10.Text = "Sangsi"
+        '
         'Fterlambat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 462)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.tb_sangsi)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.btn_cari)
+        Me.Controls.Add(Me.txtcari)
         Me.Controls.Add(Me.cb_nis)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
@@ -249,7 +303,9 @@ Partial Class Fterlambat
         Me.Controls.Add(Me.tb_tgl)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Fterlambat"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fterlambat"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -278,4 +334,9 @@ Partial Class Fterlambat
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents cb_nis As System.Windows.Forms.ComboBox
+    Friend WithEvents txtcari As System.Windows.Forms.TextBox
+    Friend WithEvents btn_cari As System.Windows.Forms.Button
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents tb_sangsi As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

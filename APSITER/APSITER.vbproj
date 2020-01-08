@@ -71,10 +71,28 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fabout.Designer.vb">
+      <DependentUpon>Fabout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fabout.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Fkelas.designer.vb">
       <DependentUpon>Fkelas.vb</DependentUpon>
     </Compile>
     <Compile Include="Fkelas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlapSiswaGuru.Designer.vb">
+      <DependentUpon>FlapSiswaGuru.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FlapSiswaGuru.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlapTerlambat.Designer.vb">
+      <DependentUpon>FlapTerlambat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FlapTerlambat.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fmenu.Designer.vb">
@@ -83,17 +101,16 @@
     <Compile Include="Fmenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Fguru.designer.vb">
       <DependentUpon>Fguru.vb</DependentUpon>
     </Compile>
     <Compile Include="Fguru.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fregistrasi.designer.vb">
@@ -131,17 +148,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Fabout.resx">
+      <DependentUpon>Fabout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fkelas.resx">
       <DependentUpon>Fkelas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlapSiswaGuru.resx">
+      <DependentUpon>FlapSiswaGuru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlapTerlambat.resx">
+      <DependentUpon>FlapTerlambat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fmenu.resx">
       <DependentUpon>Fmenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Fguru.resx">
       <DependentUpon>Fguru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fregistrasi.resx">
       <DependentUpon>Fregistrasi.vb</DependentUpon>
@@ -170,6 +196,25 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCrystal">
+      <Guid>{00025600-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Crystal">
+      <Guid>{00025600-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,3 +14,11 @@ D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\APSITER.Fsiswa.resources
 D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\APSITER.Fguru.resources
 D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\APSITER.Fkelas.resources
 D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\APSITER.Fterlambat.resources
+D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\Interop.Crystal.dll
+D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\AxInterop.Crystal.dll
+D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\APSITER.vbproj.ResolveComReference.cache
+D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\APSITER.FlapSiswaGuru.resources
+D:\TUGAS UAS VB\APSITER\APSITER\bin\Debug\Interop.Crystal.dll
+D:\TUGAS UAS VB\APSITER\APSITER\bin\Debug\AxInterop.Crystal.dll
+D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\APSITER.FlapTerlambat.resources
+D:\TUGAS UAS VB\APSITER\APSITER\obj\Debug\APSITER.Fabout.resources

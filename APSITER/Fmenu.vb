@@ -39,4 +39,19 @@
     Private Sub Fmenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub SiswaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SiswaToolStripMenuItem1.Click
+        FlapSiswaGuru.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub GuruToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles GuruToolStripMenuItem1.Click
+        FlapTerlambat.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        Fabout.Show()
+        Me.Hide()
+    End Sub
 End Class

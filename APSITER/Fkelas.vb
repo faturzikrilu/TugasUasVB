@@ -22,10 +22,10 @@ Public Class Fkelas
     Sub aturangrid()
         DataGridView1.Columns(0).Width = 100
         DataGridView1.Columns(1).Width = 100
-        DataGridView1.Columns(2).Width = 100
+        DataGridView1.Columns(2).Width = 127
         DataGridView1.Columns(0).HeaderText = "NIS"
         DataGridView1.Columns(1).HeaderText = "Kelas"
-        DataGridView1.Columns(2).HeaderText = "KD Guru"
+        DataGridView1.Columns(2).HeaderText = "Walikelas"
         DataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DataGridView1.RowsDefaultCellStyle.BackColor = Color.BlueViolet
         DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.BlanchedAlmond
@@ -100,7 +100,7 @@ Public Class Fkelas
     End Sub
 
     Private Sub btn_hapus_Click(sender As Object, e As EventArgs) Handles btn_hapus.Click
-        If MessageBox.Show("yakin akan dihapus..?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show("Yakin akan dihapus..?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             koneksi()
             Dim hapus As String = "delete from t_pembagian_kls where nis='" & cb_nis.Text & "'"
             cmd = New MySqlCommand(hapus, conn)
@@ -116,4 +116,18 @@ Public Class Fkelas
         cb_kd.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Call koneksi()
+        cmd = New MySqlCommand("select * from t_pembagian_kls where kelas like '%" & ComboBox1.Text & "%'", conn)
+        rd = cmd.ExecuteReader
+        rd.Read()
+        If rd.HasRows Then
+            Call koneksi()
+            da = New MySqlDataAdapter("select * from t_pembagian_kls where kelas like '%" & ComboBox1.Text & "%'", conn)
+            ds = New DataSet
+            da.Fill(ds, "ketemu")
+            DataGridView1.DataSource = ds.Tables("ketemu")
+            DataGridView1.ReadOnly = True
+        End If
+    End Sub
 End Class

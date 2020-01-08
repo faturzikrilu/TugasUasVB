@@ -22,6 +22,7 @@ Partial Class Fguru
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fguru))
         Me.btn_hapus = New System.Windows.Forms.Button()
         Me.btn_keluar = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -341,7 +342,9 @@ Partial Class Fguru
         Me.Controls.Add(Me.tb_kd)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Fguru"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fguru"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

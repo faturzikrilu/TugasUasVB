@@ -22,6 +22,7 @@ Partial Class Fkelas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fkelas))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,6 +35,9 @@ Partial Class Fkelas
         Me.cb_kls = New System.Windows.Forms.ComboBox()
         Me.cb_nis = New System.Windows.Forms.ComboBox()
         Me.cb_kd = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,9 +67,9 @@ Partial Class Fkelas
         Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(26, 200)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 18)
+        Me.Label3.Size = New System.Drawing.Size(72, 18)
         Me.Label3.TabIndex = 46
-        Me.Label3.Text = "KD Guru"
+        Me.Label3.Text = "Walikelas"
         '
         'btn_hapus
         '
@@ -150,11 +154,41 @@ Partial Class Fkelas
         Me.cb_kd.Size = New System.Drawing.Size(212, 21)
         Me.cb_kd.TabIndex = 80
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"X MIPA 1", "X MIPA 2", "X SOSIAL", "XI MIPA 1", "XI MIPA 2", "XI SOSIAL", "XII MIPA 1", "XII MIPA 2", "XII SOSIAL"})
+        Me.ComboBox1.Location = New System.Drawing.Point(364, 34)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 81
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(504, 34)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(37, 21)
+        Me.Button1.TabIndex = 82
+        Me.Button1.Text = "Cari"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(364, 13)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(131, 13)
+        Me.Label4.TabIndex = 83
+        Me.Label4.Text = "Tampilkan Siswa Perkelas"
+        '
         'Fkelas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 462)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.cb_kd)
         Me.Controls.Add(Me.cb_nis)
         Me.Controls.Add(Me.cb_kls)
@@ -167,7 +201,9 @@ Partial Class Fkelas
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Fkelas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fkelas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -186,4 +222,7 @@ Partial Class Fkelas
     Friend WithEvents cb_kls As System.Windows.Forms.ComboBox
     Friend WithEvents cb_nis As System.Windows.Forms.ComboBox
     Friend WithEvents cb_kd As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class
