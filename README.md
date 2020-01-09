@@ -12,17 +12,29 @@ Aplikasi Siswa Terlambat
 ## Fitur
 
 - Login
+username
+password
+level
 - Register
-- Ubah Password
-- Manajemen Data Barang
-- Teruskan
+id
+user
+pass
+nama lengkap
+- input data siswa
+- input data guru
+- input data kelas
+- input data terlambat
+-laporan
+data siswa dana guru
+data terlambat
+- abaot
 
 ## Kontributor
 
-- muhammad Fatur zikrilulum 
-- jalaludin
-- hartawan
-- pajlurrahman
+- muhammad Fatur zikrilulum (pleksibel)
+- jalaludin (input data guru)
+- hartawan (moderator)
+- pajlurrahman (input data siswa)
 
 ## Saran
 
